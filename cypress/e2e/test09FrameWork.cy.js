@@ -32,7 +32,11 @@ describe('Submit Framework', () => {
 
           const productName = this.data.productName
 
-          cy.log(Cypress.env('baseUrl'))
+        //  cy.log(Cypress.env('baseUrl'))
+
+        cy.then(() => {
+  console.log(Cypress.env('baseUrl'))
+})
 
 //          // Go to URL
 //    //       this.homePage.goToURL(Cypress.env('url') + "/loginpagePractise/")
