@@ -35,6 +35,8 @@ describe('Submit Framework', () => {
          // Go to URL
    //       this.homePage.goToURL(Cypress.env('url') + "/loginpagePractise/")
    cy.visit(Cypress.env('baseUrl') + "/loginpagePractise/")
+   cy.visit('/')
+cy.url().then(url => cy.log(url))
 
           // Login to the System
           this.homePage.login(Cypress.env('username'), Cypress.env('password'))
