@@ -25,7 +25,7 @@ describe('Submit Framework', () => {
 
     it('End to end framework',function () {
 
-        Cypress.config('defaultCommandTimeout', 10000)
+     //   Cypress.config('defaultCommandTimeout', 10000)
         // const homePage = new HomePage()
        //  const productPage  = new ProductPage()
 
@@ -34,10 +34,11 @@ describe('Submit Framework', () => {
 
         //  cy.log(Cypress.env('baseUrl'))
 
-        cy.then(() => {
-  console.log(Cypress.env('baseUrl'))
-})
-
+   cy.then(() => {
+    console.log('ENV:', Cypress.env())
+    console.log('Base URL:', Cypress.env('baseUrl'))
+    console.log('Username:', Cypress.env('username'))
+  })
 //          // Go to URL
 //    //       this.homePage.goToURL(Cypress.env('url') + "/loginpagePractise/")
 //    cy.visit(Cypress.env('baseUrl') + "/loginpagePractise/")
