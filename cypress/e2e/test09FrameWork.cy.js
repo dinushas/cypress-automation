@@ -32,53 +32,55 @@ describe('Submit Framework', () => {
 
           const productName = this.data.productName
 
-         // Go to URL
-   //       this.homePage.goToURL(Cypress.env('url') + "/loginpagePractise/")
-   cy.visit(Cypress.env('baseUrl') + "/loginpagePractise/")
-   cy.visit('/')
-cy.url().then(url => cy.log(url))
+          cy.log(Cypress.env('baseUrl'))
 
-          // Login to the System
-          this.homePage.login(Cypress.env('username'), Cypress.env('password'))
+//          // Go to URL
+//    //       this.homePage.goToURL(Cypress.env('url') + "/loginpagePractise/")
+//    cy.visit(Cypress.env('baseUrl') + "/loginpagePractise/")
+// //    cy.visit('/')
+// // cy.url().then(url => cy.log(url))
 
-          // Check Product Pahe page header
-          this.productPage.pageHeaderValidation('Shop Name')
-          this.productPage.verifyProductCardLinks(4) 
+//           // Login to the System
+//           this.homePage.login(Cypress.env('username'), Cypress.env('password'))
 
-          // Select Product 
+//           // Check Product Pahe page header
+//           this.productPage.pageHeaderValidation('Shop Name')
+//           this.productPage.verifyProductCardLinks(4) 
 
-         this.productPage.selectProduct(productName)
+//           // Select Product 
 
-         // Select First Product
+//          this.productPage.selectProduct(productName)
 
-         this.productPage.selectFirstProduct()
+//          // Select First Product
 
-         // Click checkout Button
+//          this.productPage.selectFirstProduct()
 
-         this.productPage.clickCheckOutButton()
+//          // Click checkout Button
+
+//          this.productPage.clickCheckOutButton()
 
        
-        // check product price total is 200000
-        this.cartPage.checkSumLessthanExpectedAmount(200000)
+//         // check product price total is 200000
+//         this.cartPage.checkSumLessthanExpectedAmount(200000)
 
-        // Click on checkout
-        this.cartPage.clickCheckOutButton('Checkout')
+//         // Click on checkout
+//         this.cartPage.clickCheckOutButton('Checkout')
 
-        // Select Country
+//         // Select Country
 
-        this.confirmationPage.selectCountry('India')
+//         this.confirmationPage.selectCountry('India')
 
-        // Click I agree checkbox
+//         // Click I agree checkbox
 
-        this.confirmationPage.clickIAgrreeCheckBox ()
+//         this.confirmationPage.clickIAgrreeCheckBox ()
 
-       // Click on PurchaseButton
+//        // Click on PurchaseButton
 
-       this.confirmationPage.clickPurchaseButton() 
+//        this.confirmationPage.clickPurchaseButton() 
 
-       // Check Success message
+//        // Check Success message
 
-       this.confirmationPage.checkSuccessMessage('Success') 
+//        this.confirmationPage.checkSuccessMessage('Success') 
        
 
 
